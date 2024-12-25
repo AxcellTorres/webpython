@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook</title>
+    <style>
+        .centrar {
+            height: 50%;
+            width: 50%;
+            margin: 0 auto;
+            background-color: aquamarine;
+            text-align: center;
+        }
+        .altura {
+            height: 100%;
+            width: 100%;
+            margin: 0 auto;
+            background-color: aquamarine;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+   <form action="/Login" method="post">
+    <div> 
+        <div class="centrar">
+            <label for="username">Username:</label>
+            <input type="text" required  id="username" placeholder="Escribe tu nombre">
+            <!-- <button type="submit" value="Iniciar Sesion">Conectar</button> -->
+        </div>
+        <div class="centrar">
+            <label for="password">Password:</label>
+            <input type="password" required id="password" placeholder="Escribe tu contraseña">
+            <br><button type="submit" value="Iniciar Sesion">Conectar</button><br><br>
+        </div>
+        <div class="centrar">
+            <button>Crear cuenta nueva</button>
+        </div>
+        </div>
+   </form>
+</body>
+</html>
