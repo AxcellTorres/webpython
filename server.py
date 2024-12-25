@@ -11,7 +11,7 @@ def menu():
  #Credenciales de usuario almacenadas en el código 
 Usuarios = { 
     "Kobayashi": "Nighttomate1",
-    "usuario2": "contraseña2" 
+    "TON": "Pvto" 
     }
  
  #Función para verificar credenciales 
