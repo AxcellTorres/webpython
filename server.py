@@ -1,16 +1,10 @@
-from flask import Flask, render_template, request, render_template_string, url_for, redirect
+from flask import Flask, render_template, request, url_for, redirect
 
 app = Flask(__name__)
 
-def home():
-    return render_template('Login.html')
-
-def menu():
-    return render_template('Menu.html')
-
  #Credenciales de usuario almacenadas en el código 
 Usuarios = { 
-    "Kobayashi": "Nighttomate1",
+    "Ko": "Night",
     "TON": "Pvto" 
     }
  
@@ -20,20 +14,20 @@ def verificar_credenciales(username, password):
  
 @app.route('/') 
 def home(): 
-    return render_template('Login.html') 
- 
-@app.route('/login', methods=['POST']) 
+    return render_template('login.html') 
+    
+@app.route('/login', methods=['post']) 
 def login(): 
      username = request.form['username'] 
      password = request.form['password']
      if verificar_credenciales(username, password): 
         return redirect(url_for('menu')) 
      else: 
-        return "Nombre de usuario o contraseña incorrectos" 
+        return render_template('login.html', error=True) 
 
 @app.route('/menu')
 def menu():
-    return render_template('Menu.html')
+    return render_template('menu.html')
   
     
 if __name__ == '__main__': 
